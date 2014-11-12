@@ -21,6 +21,7 @@ LDFLAGS +="-Wl,-rpath,$(CYCLUS_ROOT)/lib,-rpath,$(HOME)/.local/lib"
 ##### dependency config #####
 includes += -I$(HOME)/.local/include
 includes += -I$(CYCLUS_ROOT)/include/cyclus
+includes += -I$(CYCLUS_ROOT)/include/cyclus/toolkit
 includes += $(shell export PKG_CONFIG_PATH="$(HOME)/.local/lib/pkgconfig"; pkg-config --cflags sqlite3)
 includes += $(shell export PKG_CONFIG_PATH="$(HOME)/.local/lib/pkgconfig"; pkg-config --cflags cbc)
 includes += $(shell export PKG_CONFIG_PATH="$(HOME)/.local/lib/pkgconfig"; pkg-config --cflags libxml-2.0)
